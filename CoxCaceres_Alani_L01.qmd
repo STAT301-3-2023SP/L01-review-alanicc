@@ -1,0 +1,289 @@
+---
+title: "L01 Review"
+subtitle: "Data Science 3 with R (STAT 301-3)"
+author: "Alani Cox-Caceres"
+
+format:
+  html:
+    toc: true
+    embed-resources: true
+    code-fold: show
+    link-external-newwindow: true
+    
+execute:
+  warning: false
+
+from: markdown+emoji  
+---
+
+
+## Overview
+
+The goal of this lab is to review vocabulary and concepts 
+
+## Questions
+
+When completing the following questions ensure your solutions are neatly formatted and clearly indicated. Solution callout blocks have been added to clearly identify your solutions which will help speed up grading.
+
+Consider including diagrams/images in some of your solutions, if it helps to make things easier to describe/discuss.
+
+### Question 1
+
+Provide a brief outline/overview of the steps involved in a supervised machine learning process. Could provide this as a bulleted list. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Steps:
+
+1. Identify the problem and goal/outcome variable
+
+* Before manipulating the data, it's important to understand the variables being used and their classifications. The outcome variable also needs to be identified in advance to determine whar kind of model to use for the data. 
+
+2. Prepare the data
+
+* Preparing the data begins with cleaning the data and making any desired changes to the initial dataset. Then, the data needs to be tested, stratified (if necessary), and split into training and testing sets. 
+
+3. Choose an algorithm
+
+* After getting an initial review of the data, it is time to choose which algorithm(s) to use. Different algorithms have different tradeoffs that are important to consider for the current dataset being used. After choosing the most compatible algorithm, the data can be fitted to that model.
+
+4. Test metrics
+
+* The model chosen then needs to be tested for errors and accuracy. There are many different validation methods such as resubstitution and cross-validation.
+
+5. Improve original fitted model
+
+* Depending on the outcomes of the metrics, the model needs to be tuned to achieve the highest aaccuracy possible.
+
+6. Use final fit for predictions
+
+* After the model satisfies all of the previous steps, it can be used to create predictions for the outcome variable(s).
+
+:::
+
+### Question 2
+
+Explain the difference between supervised and unsupervised learning.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+**Supervised learning** uses labeled datasets, whereas **unsupervised learning** uses unlabeled dataset. 
+
+A **labeled dataset** is one that has labelled input and output data. It is called supervised learning because parts of the process need human interaction for the goals to be reached. Supervised learning is used for classification of pre-existing outcomes/variables.
+
+An **unlabeled dataset** is a hands-off approach that doesn't require human interaction for the process to be completed. a human will set the initial hyperparameters, but beyond that it works on its own. These datasets are normally used to identify patterns or trends in raw datasets.
+
+:::
+
+### Question 3 
+
+In general, we can classify a model by its purpose into 1 of the 3 categories below. Provide a brief description of the goals of these model classes.
+
+1. Descriptive Models: 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A descriptive model uses existing data to identify trends and relationships in the data. The goal of this model is usually to help further understand the data and what it does.
+
+:::
+
+2. Inferential Models:
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Inferential models are used to understand which of the independent variables in the dataset and associated with the target variable. Inferential models are used to learn about the process in which data is generated. It quantifies the level of certainty that the trends in the current data will be reflected in future data.
+
+:::
+
+3. Predictive Models:
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A predictive model is used to predict future behavior. It analyzes patterns in current data to determine future trend in that data. Prediction models use the input data to create predicted outcomes for new data.
+
+:::
+
+### Question 4 
+
+We can further describe/classify predictive models by how they were derived or developed as being either mechanistic or empirically driven. 
+
+#### Part (a)
+
+What does it mean to be a mechanistic model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A mechanistic model uses real-world data to make predictions. It's based on existing biological processes and identifies the relationships in these processes using mathematical expressions.
+
+:::
+
+#### Part (b)
+
+What does it mean to be an empirically driven model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+An empirically driven model is based on evidence or observation. It is used to determine future outcomes by observing existing outcomes of a specific circumstance.
+
+:::
+
+#### Part (c)
+
+How does the mechanistic and empirically driven model terminology relate to the parametric and nonparametric model terminology? 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A parametric model has a fixed number of parameters that are determined from the data whereas a nonparametric model has a flexible number of parameters that are not specifiedin advance. Both mechanistic and empirically driven models can be parametric or nonparametric, and the terminology in these four definitions is similar. The kind of parameters for these models are determined by details provided in the framework, which means many of these models can be manipulated to fit a specific kind of parameter. 
+
+:::
+
+#### Part (d)
+
+In general, is a mechanistic or empirically driven model easier to understand? Explain.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Mechanistic models are much more efficient and accurate than empirical models, and only require a few data points to create a prediction. However, empirical models are often simpler and don't require the same amount of computation to generate results. Even so, I think mechanistic models are easier to understand and provide more clear and consistent results compared to empirically driven models.
+
+:::
+
+#### Part (e)
+
+How does mechanistic and empirically driven model terminology relate to the idea of model flexibility? That is, which would be more or less flexible than the other.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Empirically driven models tend to be more flexible than mechanistic models because mechanistic models are based on theoretical processes whereas empirically driven models do not rely on prior assumptions to understand the underlying processes. Because of this, empirically driven models are able to identify a wwider range of patterns and trends.
+
+:::
+
+#### Part (f)
+
+Describe the bias-variance trade-off when considering the use of a mechanistic or empirically driven model. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+In a bias-variance trade-off, a mechanistic model may be better if there is a comprehensive understanding of the initial underlying processes, and the model's goal is to make predictions that align with the theoretical framework being used. However, an empirically driven model may be better if the underlying processes and too complex or difficult to understand. 
+
+:::
+
+### Question 5 
+
+Explain the difference between a regression and classification machine learning (ML) problems.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+**Regression problems** predict a continuous numerical value. They attempt to find a relationship between the input and output functions to create a continuous function.
+
+**Classification problems** predict a categorical value. They attempt to generate categories for the existing data to answer the desired question. 
+
+:::
+
+### Question 6 
+
+When splitting the data, why is it useful to stratify by the outcome/target variable? 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Stratification is helpful because it ensures that both data sets are proportional and balanced. It ensures that the training and test sets reflect the distribution of the data as a whole, and will result in more accurate predictions of the model's performance. 
+
+:::
+
+### Question 7 
+
+Briefly describe how v-fold cross validation with repeats is used to estimate test RMSE. Also provide an explanation of why we use it. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+V-fold cross validation is used to estimate the RMSE by separating the data into v folds, trains these folds, repeats that process, and then averages the RMSE estimates of each fold to produce on overall estimate of the model's performance. V-fold cross validation is helpful because it can be used to determine how well the model will perform on new, unseen data. 
+
+:::
+
+### Question 8
+
+When might we use a bootstrap resampling procedure instead of v-fold cross validation to estimate test RMSE?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Bootstrap resampling may be used when there is a limited amount of data available and we want to predict the variability of the model's performance without splitting the data into different sets. bootstrap resampling may also be used when the structure of the dataset is complex because it is a more flexible method of resampling that can adapt to different kinds of datasets.
+
+:::
+
+### Question 9 
+
+Briefly describe model tuning and why we use it.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Model tuning is the process of choosing the best hyperparameters for a specific model to increase it's performance when analyzing the data. The goal of model tuning is to figure out the best set of hyperparameters for the given model that produces the best performance on the validation set. Along with these advantages, model tuning can be used to prevent overfitting and regularize the model.
+
+:::
+
+### Question 10 
+
+What are two common performance metrics when dealing with a regression ML problem?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Two common metrics that are used with regression problems are **Mean Squared Error** and **R-squared**. Mean Squared Error measures the average squared difference between the predicted and actual values of the outcome variable, and R-squared measures the proportion of variance in the outcome variable.
+
+:::
+
+What are two common performance metrics when dealing with a classification ML problem?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Two common metrics that are used with classification problems are **Accuracy** and **F1 Score**. Accuracy measures the proportion of correctly classified instances in the dataset, and F1 Score is a mean of precision and recall to indicate the performance metrics.
+
+:::
+
+### Question 11
+
+Classify each question/problem below as either prediction or inferential. Explain your reasoning for each.
+
+A political candidate's campaign has detailed voter history data for their constituents. The campaign is interested in two questions:
+
+1. Given a voter's profile/data how likely is it that they will vote in favor of the candidate?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+This is a prediction problem because in is asking about two specific outcomes based on the given predictor variables. It only focuses on making accurate predictions based on the current data.
+
+:::
+
+2. How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+This problem in inferential because the goal is to understand the causal relationship between two variables. It asks how one variable with affect the other, and seeks to understand their relationship and how it applies to the larger population.
+
+:::
+
+
+## Github Repo Link
+
+::: {.callout-important}
+
+[https://github.com/STAT301-3-2023SP/L01-review-alanicc](https://github.com/STAT301-3-2023SP/L01-review-alanicc)
+
+:::
